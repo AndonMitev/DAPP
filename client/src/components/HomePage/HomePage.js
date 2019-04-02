@@ -17,14 +17,14 @@ export default class HomePage extends Component {
             const provider = new ethers.providers.Web3Provider(web3.currentProvider);
             const signer = provider.getSigner();
             const contract = new ethers.Contract(contractAddress, IPFSContractABI, signer);
-
             const allProductsHash = await contract.getAllProducts();
-
+            console.log(allProductsHash);
             if (!allProductsHash) {
                 console.log(this.state);
             } else {
                 const byteArray = await ipfs.cat(allProductsHash);
                 const parsedObj = JSON.parse(byteArray);
+                console.log(parsedObj);
                 this.setState({ allProductsHash })
             }
 

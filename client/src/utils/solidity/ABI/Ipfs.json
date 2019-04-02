@@ -3,7 +3,11 @@
 		"constant": false,
 		"inputs": [
 			{
-				"name": "newHash",
+				"name": "singleProductHash",
+				"type": "string"
+			},
+			{
+				"name": "allProductsHash",
 				"type": "string"
 			}
 		],

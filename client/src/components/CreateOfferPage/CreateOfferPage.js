@@ -6,6 +6,7 @@ import ModalDialog from '../shared/ModalDialog';
 import ipfs from '../../utils/solidity/ipfs';
 import ImageUploader from 'react-images-upload';
 import { ethers } from 'ethers';
+import productServices from '../../services/addProduct';
 
 
 
@@ -58,32 +59,32 @@ export default class PostOfferPage extends Component {
 
     try {
       const { title, price, description, imageAsArrayBuffer } = this.state;
-      let bufferDataToSend;
-
-      if (description) {
-        bufferDataToSend = Buffer.from(JSON.stringify({ title, price, description, imageAsArrayBuffer }))
-      } else {
-        bufferDataToSend = Buffer.from(JSON.stringify({ title, price, imageAsArrayBuffer }))
-      }
-
-      const ipfsQuery = await ipfs.add(bufferDataToSend);
-      const ipfsHash = ipfsQuery[0].hash;
-      const tx = await this.state.contract.setHash(ipfsHash);
-
       const allProdcutsHash = await this.state.contract.getAllProducts();
+      const modelToSave = { title, price, description, imageAsArrayBuffer };
+
       if (!allProdcutsHash) {
-        bufferDataToSend = Buffer.from(JSON.stringify({ allProducts: [{ title, price, description, imageAsArrayBuffer }] }));
-        const ipfsQuery = await ipfs.add(bufferDataToSend);
-        const ipfsHash = ipfsQuery[0].hash;
-        const tx = await this.state.contract.setHash(ipfsHash);
+        const [singleProductIPFSHash, allProductIPFSHash] = await productServices
+          .initialSet(modelToSave);
+        await this.state.contract.setHash(singleProductIPFSHash, allProductIPFSHash);
       } else {
-        // Get array from ipfs, save product, save array on ipfs, save hash in solidity
-        const byteArray = await ipfs.cat(allProdcutsHash);
-        const parsedObj = JSON.parse(byteArray);
-        console.log(parsedObj);
+        const singleProductHashFromSolidity = await this.state.contract.getOwnerProducts();
+
+        if (!singleProductHashFromSolidity) {
+          const singleProductIPFSHash = await productServices.initUserProducts(modelToSave);
+          const allProductIPFSHash = await productServices.collectionOfProducts(allProdcutsHash, modelToSave);
+          await this.state.contract.setHash(singleProductIPFSHash, allProductIPFSHash);
+
+        } else {
+          const singleProductNewIpfsHash = await productServices.collectionOfProducts(singleProductHashFromSolidity, modelToSave);
+          console.log(singleProductNewIpfsHash)
+          const allProductsNewIpfsHash = await productServices.collectionOfProducts(allProdcutsHash, modelToSave);
+          console.log(allProductsNewIpfsHash)
+          await this.state.contract.setHash(singleProductNewIpfsHash, allProductsNewIpfsHash);
+
+        }
       }
 
-      this.setState({ txHash: tx.hash, showModal: true });
+      // this.setState({ txHash: tx.hash, showModal: true });
     } catch (error) {
       console.error(error);
     }
