@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import getWeb3 from '../../utils/solidity/getWeb3';
 import IPFSContractABI from '../../utils/solidity/ABI/Ipfs.json';
 import contractAddress from '../../utils/solidity/contractAddress';
-// import ModalDialog from '../shared/ModalDialog';
+import ModalDialog from '../shared/ModalDialog';
 import ipfs from '../../utils/solidity/ipfs';
 import ImageUploader from 'react-images-upload';
 import { ethers } from 'ethers';
@@ -25,19 +25,11 @@ export default class PostOfferPage extends Component {
 
   componentDidMount = async () => {
     try {
-      console.log('here');
       const web3 = await getWeb3();
       const provider = new ethers.providers.Web3Provider(web3.currentProvider);
       const signer = provider.getSigner();
       const contract = new ethers.Contract(contractAddress, IPFSContractABI, signer);
-      web3.eth.getAccounts((err, accounts) => {
-        if (err) {
-          console.error(err);
-          return;
-        }
-        web3.eth.defaultAccount = accounts[0];
-        this.setState({ contract, web3, signer });
-      })
+      this.setState({ contract, web3, signer });
     } catch (error) {
       console.log(error);
     }
@@ -77,7 +69,20 @@ export default class PostOfferPage extends Component {
       const ipfsQuery = await ipfs.add(bufferDataToSend);
       const ipfsHash = ipfsQuery[0].hash;
       const tx = await this.state.contract.setHash(ipfsHash);
-      console.log(tx);
+
+      const allProdcutsHash = await this.state.contract.getAllProducts();
+      if (!allProdcutsHash) {
+        bufferDataToSend = Buffer.from(JSON.stringify({ allProducts: [{ title, price, description, imageAsArrayBuffer }] }));
+        const ipfsQuery = await ipfs.add(bufferDataToSend);
+        const ipfsHash = ipfsQuery[0].hash;
+        const tx = await this.state.contract.setHash(ipfsHash);
+      } else {
+        // Get array from ipfs, save product, save array on ipfs, save hash in solidity
+        const byteArray = await ipfs.cat(allProdcutsHash);
+        const parsedObj = JSON.parse(byteArray);
+        console.log(parsedObj);
+      }
+
       this.setState({ txHash: tx.hash, showModal: true });
     } catch (error) {
       console.error(error);
@@ -115,10 +120,10 @@ export default class PostOfferPage extends Component {
           />
           <input type="submit" className="btn btn-primary offset-4 col-4 mt-3" value="Create" />
         </form>
-        {/* <ModalDialog
+        <ModalDialog
           showModal={this.state.showModal}
           txHash={this.state.txHash}
-        /> */}
+        />
       </React.Fragment>
     );
   }
