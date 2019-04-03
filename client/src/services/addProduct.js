@@ -2,7 +2,10 @@ import ipfs from '../utils/solidity/ipfs';
 
 const productServices = (() => {
 
-  const prepareProductsForIPFS = objectToSave => Buffer.from(JSON.stringify([{ ...objectToSave }]));
+  const prepareProductsForIPFS = objectToSave => {
+    console.log(objectToSave);
+    return Buffer.from(JSON.stringify(objectToSave));
+  }
   const addToIPFS = async productsInBytes => await ipfs.add(productsInBytes);
   const extractHashFromIPFSResponse = IPFSResponse => IPFSResponse[0].hash;
   const getFromIPFS = async hash => await ipfs.cat(hash);
@@ -10,8 +13,8 @@ const productServices = (() => {
 
   const initialSet = async objectToSave => {
     // Convert to byte array
-    const userProductsInByte = prepareProductsForIPFS({ ...objectToSave, createdAt: Date.now() });
-    const allProductsInByte = prepareProductsForIPFS({ ...objectToSave, createdAt: Date.now() });
+    const userProductsInByte = prepareProductsForIPFS([{ ...objectToSave, createdAt: Date.now() }]);
+    const allProductsInByte = prepareProductsForIPFS([{ ...objectToSave, createdAt: Date.now() }]);
     // Get hashes
     const addSingleProductsIPFS = await addToIPFS(userProductsInByte);
     const addProductsIPFs = await addToIPFS(allProductsInByte);
@@ -22,7 +25,7 @@ const productServices = (() => {
   }
 
   const initUserProducts = async objectToSave => {
-    const userProductsInByte = prepareProductsForIPFS({ ...objectToSave, createdAt: Date.now() });
+    const userProductsInByte = prepareProductsForIPFS([{ ...objectToSave, createdAt: Date.now() }]);
     const singleProductHash = await addToIPFS(userProductsInByte);
     return singleProductHash[0].hash;
   }
@@ -30,7 +33,10 @@ const productServices = (() => {
   const collectionOfProducts = async (hash, objectToSave) => {
     const allProductsIpfsHash = await getFromIPFS(hash);
     const allProducts = parseToObject(allProductsIpfsHash);
-    allProducts.push({ ...objectToSave, createdAt: Date.now() });
+    console.log(allProducts);
+    objectToSave.createdAt = Date.now();
+    allProducts.push(objectToSave);
+    console.log(allProducts);
     const allProductsInByte = prepareProductsForIPFS(allProducts);
     const addProductsIPFs = await addToIPFS(allProductsInByte);
 
@@ -40,7 +46,10 @@ const productServices = (() => {
   return {
     initialSet,
     initUserProducts,
-    collectionOfProducts
+    collectionOfProducts,
+    addToIPFS,
+    getFromIPFS,
+    parseToObject
   }
 
 })();

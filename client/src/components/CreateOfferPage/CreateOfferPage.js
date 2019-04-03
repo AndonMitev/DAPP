@@ -21,7 +21,8 @@ export default class PostOfferPage extends Component {
     description: null,
     pictures: [],
     imageAsArrayBuffer: null,
-    signer: null
+    signer: null,
+    from: null,
   }
 
   componentDidMount = async () => {
@@ -30,6 +31,7 @@ export default class PostOfferPage extends Component {
       const provider = new ethers.providers.Web3Provider(web3.currentProvider);
       const signer = provider.getSigner();
       const contract = new ethers.Contract(contractAddress, IPFSContractABI, signer);
+
       this.setState({ contract, web3, signer });
     } catch (error) {
       console.log(error);
@@ -56,35 +58,34 @@ export default class PostOfferPage extends Component {
 
   handleOnSubmit = async event => {
     event.preventDefault();
-
+    
     try {
+      const from = this.state.signer.provider._web3Provider.selectedAddress;
       const { title, price, description, imageAsArrayBuffer } = this.state;
       const allProdcutsHash = await this.state.contract.getAllProducts();
-      const modelToSave = { title, price, description, imageAsArrayBuffer };
+      const modelToSave = { title, price, description, imageAsArrayBuffer, from };
+      let tx;
 
       if (!allProdcutsHash) {
         const [singleProductIPFSHash, allProductIPFSHash] = await productServices
           .initialSet(modelToSave);
-        await this.state.contract.setHash(singleProductIPFSHash, allProductIPFSHash);
+        tx = await this.state.contract.setHash(singleProductIPFSHash, allProductIPFSHash);
       } else {
         const singleProductHashFromSolidity = await this.state.contract.getOwnerProducts();
 
         if (!singleProductHashFromSolidity) {
           const singleProductIPFSHash = await productServices.initUserProducts(modelToSave);
           const allProductIPFSHash = await productServices.collectionOfProducts(allProdcutsHash, modelToSave);
-          await this.state.contract.setHash(singleProductIPFSHash, allProductIPFSHash);
+          tx = await this.state.contract.setHash(singleProductIPFSHash, allProductIPFSHash);
 
         } else {
           const singleProductNewIpfsHash = await productServices.collectionOfProducts(singleProductHashFromSolidity, modelToSave);
-          console.log(singleProductNewIpfsHash)
           const allProductsNewIpfsHash = await productServices.collectionOfProducts(allProdcutsHash, modelToSave);
-          console.log(allProductsNewIpfsHash)
-          await this.state.contract.setHash(singleProductNewIpfsHash, allProductsNewIpfsHash);
+          tx = await this.state.contract.setHash(singleProductNewIpfsHash, allProductsNewIpfsHash);
 
         }
       }
-
-      // this.setState({ txHash: tx.hash, showModal: true });
+      this.setState({ txHash: tx.hash, showModal: true });
     } catch (error) {
       console.error(error);
     }

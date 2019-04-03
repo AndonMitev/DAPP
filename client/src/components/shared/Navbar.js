@@ -14,10 +14,10 @@ const Navbar = () => {
                         <NavLink className="nav-link text-white mr-3" to="/home">Home <span className="sr-only">(current)</span></NavLink>
                     </li>
                     <li className="nav-item">
-                        <NavLink className="nav-link  text-white mr-3" to="/new-offer">Post offer</NavLink>
+                        <NavLink className="nav-link  text-white mr-3" to="/new/offer">Post offer</NavLink>
                     </li>
                     <li className="nav-item">
-                        <NavLink className="nav-link  text-white mr-3" to="/my-offers">My offers</NavLink>
+                        <NavLink className="nav-link  text-white mr-3" to="/my/offers">My offers</NavLink>
                     </li>
                     <li className="nav-item dropdown">
                     </li>
