@@ -3,7 +3,7 @@ import ipfs from '../../utils/solidity/ipfs';
 import CollectionOfProductsComponent from '../shared/CollectionOfProductsComponent';
 import contractSetup from '../../services/prepareContract';
 
-export default class MyOffersPage extends Component {
+export default class MyOffersComponent extends Component {
 
   state = {
     allProducts: [],

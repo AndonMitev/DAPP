@@ -3,7 +3,7 @@ import productServices from '../../services/addProduct';
 import contractSetup from '../../services/prepareContract';
 import CollectionOfProductsComponent from '../shared/CollectionOfProductsComponent';
 
-export default class OfferDetailsPage extends Component {
+export default class OfferDetailsComponent extends Component {
   constructor(props) {
     super(props);
 

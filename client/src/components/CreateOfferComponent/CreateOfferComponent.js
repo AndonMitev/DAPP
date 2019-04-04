@@ -4,7 +4,7 @@ import ModalDialog from '../shared/ModalDialog';
 import productServices from '../../services/addProduct';
 import contractSetup from '../../services/prepareContract';
 
-export default class PostOfferPage extends Component {
+export default class CreateOfferComponent extends Component {
   state = {
     contract: null,
     web3: null,

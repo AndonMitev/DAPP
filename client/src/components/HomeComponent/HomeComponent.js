@@ -4,7 +4,7 @@ import contractSetup from '../../services/prepareContract';
 import CollectionOfProductsComponent from '../shared/CollectionOfProductsComponent';
 
 
-export default class HomePage extends Component {
+export default class HomeComponent extends Component {
     state = {
         allProducts: [],
         isLoading: false

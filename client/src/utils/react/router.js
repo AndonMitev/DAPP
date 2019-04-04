@@ -1,17 +1,17 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import HomePage from '../../components/HomePage/HomePage';
-import CreateOfferPage from '../../components/CreateOfferPage/CreateOfferPage';
-import MyOffersPage from '../../components/MyOffersPage/MyOffersPage';
-import OfferDetailsPage from '../../components/OfferDetailsPage/OfferDetailsPage';
+import HomeComponent from '../../components/HomeComponent/HomeComponent';
+import CreateOfferComponent from '../../components/CreateOfferComponent/CreateOfferComponent';
+import MyOffersComponent from '../../components/MyOffersComponent/MyOffersComponent';
+import OfferDetailsComponent from '../../components/OfferDetailsComponent/OfferDetailsComponent';
 
 const AppRoutes = () =>
     <Switch>
-        <Route path='/' exact component={HomePage} />
-        <Route path='/home' component={HomePage} />
-        <Route path='/new/offer' component={CreateOfferPage} />
-        <Route path='/my/offers' component={MyOffersPage} />
-        <Route path='/offer/details/:from/:idx' component={OfferDetailsPage} />
+        <Route path='/' exact component={HomeComponent} />
+        <Route path='/home' component={HomeComponent} />
+        <Route path='/new/offer' component={CreateOfferComponent} />
+        <Route path='/my/offers' component={MyOffersComponent} />
+        <Route path='/offer/details/:from/:idx' component={OfferDetailsComponent} />
     </Switch>
 
 
