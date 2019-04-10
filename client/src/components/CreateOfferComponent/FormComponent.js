@@ -11,7 +11,9 @@ export default class FormComponent extends Component {
       description: null,
       pictures: [],
       imageAsArrayBuffer: null,
-      to: ''
+      to: '',
+      quantity: '',
+      buttonDisabled: false
     }
   }
 
@@ -35,6 +37,7 @@ export default class FormComponent extends Component {
 
   handleOnSubmit = event => {
     event.preventDefault();
+    this.setState({ buttonDisabled: true });
     this.props.setNewOffer(this.state);
   }
 
@@ -47,9 +50,14 @@ export default class FormComponent extends Component {
           <input onChange={this.handleOnChange} type="text" name="title" className="form-control" placeholder="Your product name..." />
         </div>
         <div className="form-group">
-          <label>Price in wei*</label>
-          <input onChange={this.handleOnChange} type="number" name="price" className="form-control" placeholder="Set price in wei" />
+          <label>Ethers*</label>
+          <input onChange={this.handleOnChange} type="number" name="price" className="form-control" placeholder="Set price in Ethers" />
         </div>
+        <div className="form-group">
+          <label>Quantity*</label>
+          <input onChange={this.handleOnChange} type="number" name="quantity" className="form-control" placeholder="Quantity" />
+        </div>
+
         <div>
           <label>Description</label>
           <textarea onChange={this.handleOnChange} type="text" name="description" className="form-control" placeholder="Tell to people more details about your product..."></textarea>
@@ -65,7 +73,7 @@ export default class FormComponent extends Component {
           imgExtension={['.jpg', '.gif', '.png', '.gif', '.jpeg']}
           maxFileSize={5242880}
         />
-        <input type="submit" className="btn btn-primary offset-4 col-4 mt-3" value="Create" />
+        <input disabled={this.state.buttonDisabled} type="submit" className="btn btn-primary offset-4 col-4 mt-3" value={this.state.buttonDisabled ? 'Processing...' : 'Create'} />
       </form>
     </React.Fragment>
   );

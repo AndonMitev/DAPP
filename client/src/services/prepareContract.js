@@ -9,6 +9,7 @@ const contractSetup = (async () => {
   const provider = new ethers.providers.Web3Provider(web3.currentProvider);
   const signer = provider.getSigner();
   const contract = new ethers.Contract(contractAddress, IPFSContractABI, signer);
+
   return { web3, provider, signer, contract };
 })();
 
