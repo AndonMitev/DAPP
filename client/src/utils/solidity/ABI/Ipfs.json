@@ -3,7 +3,7 @@
 		"constant": false,
 		"inputs": [
 			{
-				"name": "member",
+				"name": "_member",
 				"type": "address"
 			},
 			{
@@ -59,6 +59,20 @@
 		"constant": false,
 		"inputs": [
 			{
+				"name": "_listOfMembersToJoin",
+				"type": "string"
+			}
+		],
+		"name": "applyForTeam",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
 				"name": "_productOwner",
 				"type": "address"
 			},
@@ -93,24 +107,6 @@
 		"constant": false,
 		"inputs": [
 			{
-				"name": "_listOfMembersToJoin",
-				"type": "string"
-			}
-		],
-		"name": "joinInTheTeam",
-		"outputs": [],
-		"payable": false,
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"constant": false,
-		"inputs": [
-			{
-				"name": "_productOwner",
-				"type": "address"
-			},
-			{
 				"name": "_id",
 				"type": "uint256"
 			},
@@ -140,6 +136,127 @@
 		"payable": false,
 		"stateMutability": "nonpayable",
 		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "amount",
+				"type": "uint256"
+			}
+		],
+		"name": "withdraw",
+		"outputs": [],
+		"payable": true,
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"payable": true,
+		"stateMutability": "payable",
+		"type": "fallback"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"name": "_productOwner",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"name": "_id",
+				"type": "uint256"
+			}
+		],
+		"name": "NewProductAdded",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"name": "_productOwner",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"name": "_price",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"name": "_time",
+				"type": "uint256"
+			}
+		],
+		"name": "ProductBuyed",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"name": "_productOwner",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"name": "_id",
+				"type": "uint256"
+			}
+		],
+		"name": "ProductEdited",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"name": "_participant",
+				"type": "address"
+			}
+		],
+		"name": "ApplyedForTeam",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"name": "_teamMember",
+				"type": "address"
+			}
+		],
+		"name": "AcceptedInTeam",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"name": "withdrawer",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"name": "amount",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"name": "time",
+				"type": "uint256"
+			}
+		],
+		"name": "Withdrawed",
+		"type": "event"
 	},
 	{
 		"constant": true,
@@ -172,16 +289,8 @@
 	{
 		"constant": true,
 		"inputs": [],
-		"name": "checkBalanceOfContract",
+		"name": "checkSellsOfContract",
 		"outputs": [
-			{
-				"name": "",
-				"type": "uint256"
-			},
-			{
-				"name": "",
-				"type": "uint256"
-			},
 			{
 				"name": "",
 				"type": "uint256"
@@ -258,121 +367,43 @@
 	{
 		"constant": true,
 		"inputs": [],
+		"name": "memberData",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "myBalance",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
 		"name": "owner",
 		"outputs": [
 			{
 				"name": "",
 				"type": "address"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"constant": true,
-		"inputs": [],
-		"name": "pendingToJoin",
-		"outputs": [
-			{
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"constant": true,
-		"inputs": [
-			{
-				"name": "",
-				"type": "address"
-			},
-			{
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"name": "productOf",
-		"outputs": [
-			{
-				"name": "productHash",
-				"type": "string"
-			},
-			{
-				"name": "price",
-				"type": "uint256"
-			},
-			{
-				"name": "quantity",
-				"type": "uint256"
-			},
-			{
-				"name": "id",
-				"type": "uint256"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"constant": true,
-		"inputs": [],
-		"name": "teamMembers",
-		"outputs": [
-			{
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"constant": true,
-		"inputs": [],
-		"name": "totalProducts",
-		"outputs": [
-			{
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"constant": true,
-		"inputs": [],
-		"name": "totalSells",
-		"outputs": [
-			{
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"constant": true,
-		"inputs": [
-			{
-				"name": "",
-				"type": "address"
-			}
-		],
-		"name": "userProducts",
-		"outputs": [
-			{
-				"name": "",
-				"type": "string"
 			}
 		],
 		"payable": false,

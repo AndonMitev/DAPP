@@ -14,14 +14,23 @@ export default class ViewContractInformationComponent extends Component {
 
   componentDidMount = async () => {
     const { _, __, ___, contract } = await contractSetup;
-    let contractData = await contract.checkBalanceOfContract();
-    contractData = contractData.map(e => ethers.utils.formatEther(e, { commify: true })).map((e, i) => {
+    let sellsData = await contract.checkSellsOfContract();
+    sellsData = sellsData.map(e => ethers.utils.formatEther(e, { commify: true })).map((e, i) => {
       if (i !== 0) {
         return e * 1000000000000000000;
       }
       return e;
     });
-    const [contractBalance, totalSells, totalProducts, pendingToJoin, teamMembers] = contractData;
+    const [contractBalance, totalSells, totalProducts] = sellsData;
+
+    let teamData = await contract.memberData();
+    teamData = teamData.map(e => ethers.utils.formatEther(e, { commify: true })).map((e, i) => {
+      if (i !== 0) {
+        return e * 1000000000000000000;
+      }
+      return e;
+    });
+    const [pendingToJoin, teamMembers] = teamData;
 
     this.setState({ contractBalance, totalSells, totalProducts, pendingToJoin, teamMembers });
     console.log(this.state);

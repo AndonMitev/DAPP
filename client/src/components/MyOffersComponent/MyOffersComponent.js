@@ -25,7 +25,6 @@ export default class MyOffersComponent extends Component {
   componentDidMount = async () => {
     try {
       const { _, __, signer, contract } = await contractSetup;
-      console.log(signer._address);
       const ipfsHash = await contract.getProductsForMember(signer._address);
       if (!ipfsHash) {
         this.setState({ hasNoOffers: true, isLoading: false, contract });
@@ -44,7 +43,7 @@ export default class MyOffersComponent extends Component {
 
   checkBalance = async () => {
     try {
-      let balance = await this.state.contract.checkMyBalance();
+      let balance = await this.state.contract.myBalance();
       balance = ethers.utils.formatEther(balance);
       if (!balance) {
         this.setState({ hasZeroBalance: true });

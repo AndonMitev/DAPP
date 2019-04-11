@@ -72,13 +72,14 @@ export default class OfferDetailsComponent extends Component {
       const [allProductsHash, singleProductHash, memberProductsHash] =
         [allProductsIPFSResponse[0].hash, singleProductIPFSResponse[0].hash, memberProductsIPFSResponse[0].hash];
 
+      const price = ((this.state.product.price * this.state.quantityToBuy)).toString();
       let tx = await this.state.contract.buyProduct(
         this.state.product.from,
         this.state.idx,
         this.state.product.quantity,
         singleProductHash,
         allProductsHash,
-        memberProductsHash, { value: ethers.utils.parseEther('1') });
+        memberProductsHash, { value: ethers.utils.parseEther(price) });
       toast.success(`Processing your request...`, {
         position: toast.POSITION.TOP_RIGHT
       });

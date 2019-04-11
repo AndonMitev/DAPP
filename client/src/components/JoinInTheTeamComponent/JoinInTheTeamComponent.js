@@ -32,7 +32,7 @@ export default class JoinInTheTeamComponent extends Component {
         candidate.id = 1;
         candidates.push(candidate);
         const IPFSResponse = await this.prepareForIPFS(candidates);
-        tx = await this.state.contract.joinInTheTeam(IPFSResponse[0].hash);
+        tx = await this.state.contract.applyForTeam(IPFSResponse[0].hash);
       } else {
         const candidatesFromIPFS = await ipfs.cat(listOfCandidates);
         const existingCandidates = JSON.parse(candidatesFromIPFS);
@@ -49,7 +49,7 @@ export default class JoinInTheTeamComponent extends Component {
           candidate.id = existingCandidates.length + 1;
           candidates = [...existingCandidates, candidate];
           const IPFSResponse = await this.prepareForIPFS(candidates);
-          tx = await this.state.contract.joinInTheTeam(IPFSResponse[0].hash);
+          tx = await this.state.contract.applyForTeam(IPFSResponse[0].hash);
         }
       }
       this.setState({ showModal: true, txHash: tx.hash });

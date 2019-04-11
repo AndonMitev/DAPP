@@ -66,7 +66,7 @@ export default class Navbar extends Component {
                         {this.state.owner.isOwner || this.state.member.isMember ? <NavLink className="nav-link  text-white mr-3" to="/new/offer">Post offer</NavLink> : null}
                     </li>
                     <li className="nav-item">
-                        <NavLink className="nav-link  text-white mr-3" to="/join">Join in the team</NavLink>
+                        {!this.state.owner.isOwner && !this.state.member.isMember ? <NavLink className="nav-link  text-white mr-3" to="/join">Join in the team</NavLink> : null}
                     </li>
                     <li className="nav-item">
                         {this.state.owner.isOwner ? <NavLink className="nav-link  text-white mr-3" to="/candidates">View candidates</NavLink> : null}

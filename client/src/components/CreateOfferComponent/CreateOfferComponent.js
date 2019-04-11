@@ -53,13 +53,13 @@ export default class CreateOfferComponent extends Component {
         items.push(productToSave);
         console.log('here');
         const allProductsIPFSResponse = await this.prepareForIPFS(items);
-        console.log('here1');
+        console.log(allProductsIPFSResponse[0].hash.length);
         productToSave = { ...productToSave, createdAt: Date.now() };
         const userFirstProduct = [productToSave];
         const userFirstProductIPFSResponse = await this.prepareForIPFS(userFirstProduct);
-        console.log('here2');
+        console.log(userFirstProductIPFSResponse[0].hash.length);
         const singleProductIPFSResponse = await this.prepareForIPFS(productToSave);
-        console.log('here3');
+        console.log(singleProductIPFSResponse[0].hash.length);
         const [hashForAllProductsSolidity, hashForSingleProductSolidity, hashForUserProductSolidity] =
           [allProductsIPFSResponse[0].hash, singleProductIPFSResponse[0].hash, userFirstProductIPFSResponse[0].hash];
           console.log(productToSave);
