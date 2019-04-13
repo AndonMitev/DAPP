@@ -26,6 +26,7 @@ export default class MyOffersComponent extends Component {
     try {
       const { _, __, signer, contract } = await contractSetup;
       const ipfsHash = await contract.getProductsForMember(signer._address);
+      
       if (!ipfsHash) {
         this.setState({ hasNoOffers: true, isLoading: false, contract });
         return;

@@ -4,17 +4,16 @@ import "./ProductManagmentLib.sol";
 import "./SafeMathLib.sol";
 import "./Ownable.sol";
 
-
 contract Store is Ownable {
     
     // Libraries
-    using TeamManagment for TeamManagment.Metadata;
-    using ProductManagment for ProductManagment.Metadata;
-    using SafeMath for uint;
+    using TeamManagmentLib for TeamManagmentLib.Metadata;
+    using ProductManagmentLib for ProductManagmentLib.Metadata;
+    using SafeMathLib for uint;
 
     // State
-    TeamManagment.Metadata teamMetadata;
-    ProductManagment.Metadata productMetadata;
+    TeamManagmentLib.Metadata teamMetadata;
+    ProductManagmentLib.Metadata productMetadata;
     mapping(address => uint) balanceOf;
     
     // Events
@@ -74,7 +73,7 @@ contract Store is Ownable {
     
     function acceptMember(address _member, string calldata _allTeamMembers, string calldata _listOfMembersToJoin) external {
         teamMetadata.acceptMember(_member, _allTeamMembers, _listOfMembersToJoin);
-        emit AcceptedInTeam(msg.sender);
+        emit AcceptedInTeam(_member);
     }
     
     function allTeamMembers() external view returns(string memory)  {
@@ -99,7 +98,7 @@ contract Store is Ownable {
 
     function withdraw(uint amount) external payable onlyIfHasEnough(amount) {
         address payable sender = msg.sender;
-        balanceOf[sender].sub(amount);
+        balanceOf[sender] -= amount;
         sender.transfer(amount);
         emit Withdrawed(sender, amount, now);
     }

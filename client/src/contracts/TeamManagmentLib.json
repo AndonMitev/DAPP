@@ -1,0 +1,1741 @@
+{
+  "contractName": "TeamManagmentLib",
+  "abi": [],
+  "bytecode": "0x6103a8610026600b82828239805160001a60731461001957fe5b30600052607381538281f3fe730000000000000000000000000000000000000000301460806040526004361061005d576000357c010000000000000000000000000000000000000000000000000000000090048063969a1e8f14610062578063cae81bb3146100f2575b600080fd5b81801561006e57600080fd5b506100f06004803603604081101561008557600080fd5b8101908080359060200190929190803590602001906401000000008111156100ac57600080fd5b8201836020820111156100be57600080fd5b803590602001918460018302840111640100000000831117156100e057600080fd5b90919293919293905050506101f7565b005b8180156100fe57600080fd5b506101f56004803603608081101561011557600080fd5b8101908080359060200190929190803573ffffffffffffffffffffffffffffffffffffffff1690602001909291908035906020019064010000000081111561015c57600080fd5b82018360208201111561016e57600080fd5b8035906020019184600183028401116401000000008311171561019057600080fd5b9091929391929390803590602001906401000000008111156101b157600080fd5b8201836020820111156101c357600080fd5b803590602001918460018302840111640100000000831117156101e557600080fd5b9091929391929390505050610224565b005b8260020160008154809291906001019190505550818184600101919061021e9291906102d7565b50505050565b60018660040160008773ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff021916908315150217905550856002016000815480929190600190039190505550856003016000815480929190600101919050555083838760000191906102ba9291906102d7565b5081818760010191906102ce9291906102d7565b50505050505050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061031857803560ff1916838001178555610346565b82800160010185558215610346579182015b8281111561034557823582559160200191906001019061032a565b5b5090506103539190610357565b5090565b61037991905b8082111561037557600081600090555060010161035d565b5090565b9056fea165627a7a723058202188956f49f250470ae0602dd8bc01a13abc59705333569e2410477541ad4f350029",
+  "deployedBytecode": "0x730000000000000000000000000000000000000000301460806040526004361061005d576000357c010000000000000000000000000000000000000000000000000000000090048063969a1e8f14610062578063cae81bb3146100f2575b600080fd5b81801561006e57600080fd5b506100f06004803603604081101561008557600080fd5b8101908080359060200190929190803590602001906401000000008111156100ac57600080fd5b8201836020820111156100be57600080fd5b803590602001918460018302840111640100000000831117156100e057600080fd5b90919293919293905050506101f7565b005b8180156100fe57600080fd5b506101f56004803603608081101561011557600080fd5b8101908080359060200190929190803573ffffffffffffffffffffffffffffffffffffffff1690602001909291908035906020019064010000000081111561015c57600080fd5b82018360208201111561016e57600080fd5b8035906020019184600183028401116401000000008311171561019057600080fd5b9091929391929390803590602001906401000000008111156101b157600080fd5b8201836020820111156101c357600080fd5b803590602001918460018302840111640100000000831117156101e557600080fd5b9091929391929390505050610224565b005b8260020160008154809291906001019190505550818184600101919061021e9291906102d7565b50505050565b60018660040160008773ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff021916908315150217905550856002016000815480929190600190039190505550856003016000815480929190600101919050555083838760000191906102ba9291906102d7565b5081818760010191906102ce9291906102d7565b50505050505050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061031857803560ff1916838001178555610346565b82800160010185558215610346579182015b8281111561034557823582559160200191906001019061032a565b5b5090506103539190610357565b5090565b61037991905b8082111561037557600081600090555060010161035d565b5090565b9056fea165627a7a723058202188956f49f250470ae0602dd8bc01a13abc59705333569e2410477541ad4f350029",
+  "sourceMap": "26:838:4:-;;132:2:-1;166:7;155:9;146:7;137:37;255:7;249:14;246:1;241:23;235:4;232:33;222:2;;269:9;222:2;293:9;290:1;283:20;323:4;314:7;306:22;347:7;338;331:24",
+  "deployedSourceMap": "26:838:4:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;266:201;;8:9:-1;5:2;;;30:1;27;20:12;5:2;266:201:4;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;266:201:4;;;;;;;;;;;;;;;;;;;21:11:-1;8;5:28;2:2;;;46:1;43;36:12;2:2;266:201:4;;35:9:-1;28:4;12:14;8:25;5:40;2:2;;;58:1;55;48:12;2:2;266:201:4;;;;;;100:9:-1;95:1;81:12;77:20;67:8;63:35;60:50;39:11;25:12;22:29;11:107;8:2;;;131:1;128;121:12;8:2;266:201:4;;;;;;;;;;;;:::i;:::-;;479:382;;8:9:-1;5:2;;;30:1;27;20:12;5:2;479:382:4;;;;;;13:3:-1;8;5:12;2:2;;;30:1;27;20:12;2:2;479:382:4;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;21:11:-1;8;5:28;2:2;;;46:1;43;36:12;2:2;479:382:4;;35:9:-1;28:4;12:14;8:25;5:40;2:2;;;58:1;55;48:12;2:2;479:382:4;;;;;;100:9:-1;95:1;81:12;77:20;67:8;63:35;60:50;39:11;25:12;22:29;11:107;8:2;;;131:1;128;121:12;8:2;479:382:4;;;;;;;;;;;;;;21:11:-1;8;5:28;2:2;;;46:1;43;36:12;2:2;479:382:4;;35:9:-1;28:4;12:14;8:25;5:40;2:2;;;58:1;55;48:12;2:2;479:382:4;;;;;;100:9:-1;95:1;81:12;77:20;67:8;63:35;60:50;39:11;25:12;22:29;11:107;8:2;;;131:1;128;121:12;8:2;479:382:4;;;;;;;;;;;;:::i;:::-;;266:201;373:8;:22;;;:24;;;;;;;;;;;;;439:20;;408:8;:28;;:51;;;;;;;:::i;:::-;;266:201;;;:::o;479:382::-;667:4;636:8;:19;;:28;656:7;636:28;;;;;;;;;;;;;;;;:35;;;;;;;;;;;;;;;;;;682:8;:22;;;:24;;;;;;;;;;;;;;717:8;:20;;;:22;;;;;;;;;;;;;776:15;;750:8;:23;;:41;;;;;;;:::i;:::-;;833:20;;802:8;:28;;:51;;;;;;;:::i;:::-;;479:382;;;;;;:::o;26:838::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity 0.5.6;\r\n\r\nlibrary TeamManagmentLib { \r\n    struct Metadata {\r\n        string allTeamMembers;\r\n        string listOfMembersToJoin;\r\n        uint pendingToJoin;\r\n        uint teamMembers;\r\n        mapping(address => bool) isMemberOf;\r\n    }\r\n    \r\n    function applyForTeam(Metadata storage metadata, string calldata _listOfMembersToJoin) external {\r\n        metadata.pendingToJoin++;\r\n        metadata.listOfMembersToJoin = _listOfMembersToJoin;\r\n    }\r\n    \r\n    function acceptMember(Metadata storage metadata, address _member, string calldata _allTeamMembers, string calldata _listOfMembersToJoin) external {\r\n        metadata.isMemberOf[_member] = true;\r\n        metadata.pendingToJoin--;\r\n        metadata.teamMembers++;\r\n        metadata.allTeamMembers = _allTeamMembers;\r\n        metadata.listOfMembersToJoin = _listOfMembersToJoin;\r\n    }\r\n}",
+  "sourcePath": "C:\\Users\\earth\\Desktop\\Project\\DAPP\\contracts\\TeamManagmentLib.sol",
+  "ast": {
+    "absolutePath": "/C/Users/earth/Desktop/Project/DAPP/contracts/TeamManagmentLib.sol",
+    "exportedSymbols": {
+      "TeamManagmentLib": [
+        906
+      ]
+    },
+    "id": 907,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 831,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".6"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:4"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "library",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 906,
+        "linearizedBaseContracts": [
+          906
+        ],
+        "name": "TeamManagmentLib",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "TeamManagmentLib.Metadata",
+            "id": 844,
+            "members": [
+              {
+                "constant": false,
+                "id": 833,
+                "name": "allTeamMembers",
+                "nodeType": "VariableDeclaration",
+                "scope": 844,
+                "src": "86:21:4",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 832,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "86:6:4",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 835,
+                "name": "listOfMembersToJoin",
+                "nodeType": "VariableDeclaration",
+                "scope": 844,
+                "src": "118:26:4",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 834,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "118:6:4",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 837,
+                "name": "pendingToJoin",
+                "nodeType": "VariableDeclaration",
+                "scope": 844,
+                "src": "155:18:4",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 836,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "155:4:4",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 839,
+                "name": "teamMembers",
+                "nodeType": "VariableDeclaration",
+                "scope": 844,
+                "src": "184:16:4",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 838,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "184:4:4",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 843,
+                "name": "isMemberOf",
+                "nodeType": "VariableDeclaration",
+                "scope": 844,
+                "src": "211:35:4",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+                  "typeString": "mapping(address => bool)"
+                },
+                "typeName": {
+                  "id": 842,
+                  "keyType": {
+                    "id": 840,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "219:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "nodeType": "Mapping",
+                  "src": "211:24:4",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+                    "typeString": "mapping(address => bool)"
+                  },
+                  "valueType": {
+                    "id": 841,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "230:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Metadata",
+            "nodeType": "StructDefinition",
+            "scope": 906,
+            "src": "59:195:4",
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 862,
+              "nodeType": "Block",
+              "src": "362:105:4",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 854,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "UnaryOperation",
+                    "operator": "++",
+                    "prefix": false,
+                    "src": "373:24:4",
+                    "subExpression": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 851,
+                        "name": "metadata",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 846,
+                        "src": "373:8:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Metadata_$844_storage_ptr",
+                          "typeString": "struct TeamManagmentLib.Metadata storage pointer"
+                        }
+                      },
+                      "id": 853,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "pendingToJoin",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 837,
+                      "src": "373:22:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 855,
+                  "nodeType": "ExpressionStatement",
+                  "src": "373:24:4"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 860,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 856,
+                        "name": "metadata",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 846,
+                        "src": "408:8:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Metadata_$844_storage_ptr",
+                          "typeString": "struct TeamManagmentLib.Metadata storage pointer"
+                        }
+                      },
+                      "id": 858,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "listOfMembersToJoin",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 835,
+                      "src": "408:28:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_storage",
+                        "typeString": "string storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 859,
+                      "name": "_listOfMembersToJoin",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 848,
+                      "src": "439:20:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_calldata_ptr",
+                        "typeString": "string calldata"
+                      }
+                    },
+                    "src": "408:51:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage",
+                      "typeString": "string storage ref"
+                    }
+                  },
+                  "id": 861,
+                  "nodeType": "ExpressionStatement",
+                  "src": "408:51:4"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 863,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "applyForTeam",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 849,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 846,
+                  "name": "metadata",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 863,
+                  "src": "288:25:4",
+                  "stateVariable": false,
+                  "storageLocation": "storage",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Metadata_$844_storage_ptr",
+                    "typeString": "struct TeamManagmentLib.Metadata"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 845,
+                    "name": "Metadata",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 844,
+                    "src": "288:8:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Metadata_$844_storage_ptr",
+                      "typeString": "struct TeamManagmentLib.Metadata"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 848,
+                  "name": "_listOfMembersToJoin",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 863,
+                  "src": "315:36:4",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_calldata_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 847,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "315:6:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "287:65:4"
+            },
+            "returnParameters": {
+              "id": 850,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "362:0:4"
+            },
+            "scope": 906,
+            "src": "266:201:4",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 904,
+              "nodeType": "Block",
+              "src": "625:236:4",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 880,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 874,
+                          "name": "metadata",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 865,
+                          "src": "636:8:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Metadata_$844_storage_ptr",
+                            "typeString": "struct TeamManagmentLib.Metadata storage pointer"
+                          }
+                        },
+                        "id": 877,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "isMemberOf",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 843,
+                        "src": "636:19:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+                          "typeString": "mapping(address => bool)"
+                        }
+                      },
+                      "id": 878,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 876,
+                        "name": "_member",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 867,
+                        "src": "656:7:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "636:28:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "74727565",
+                      "id": 879,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "bool",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "667:4:4",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "value": "true"
+                    },
+                    "src": "636:35:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 881,
+                  "nodeType": "ExpressionStatement",
+                  "src": "636:35:4"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 885,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "UnaryOperation",
+                    "operator": "--",
+                    "prefix": false,
+                    "src": "682:24:4",
+                    "subExpression": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 882,
+                        "name": "metadata",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 865,
+                        "src": "682:8:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Metadata_$844_storage_ptr",
+                          "typeString": "struct TeamManagmentLib.Metadata storage pointer"
+                        }
+                      },
+                      "id": 884,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "pendingToJoin",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 837,
+                      "src": "682:22:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 886,
+                  "nodeType": "ExpressionStatement",
+                  "src": "682:24:4"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 890,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "UnaryOperation",
+                    "operator": "++",
+                    "prefix": false,
+                    "src": "717:22:4",
+                    "subExpression": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 887,
+                        "name": "metadata",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 865,
+                        "src": "717:8:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Metadata_$844_storage_ptr",
+                          "typeString": "struct TeamManagmentLib.Metadata storage pointer"
+                        }
+                      },
+                      "id": 889,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "teamMembers",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 839,
+                      "src": "717:20:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 891,
+                  "nodeType": "ExpressionStatement",
+                  "src": "717:22:4"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 896,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 892,
+                        "name": "metadata",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 865,
+                        "src": "750:8:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Metadata_$844_storage_ptr",
+                          "typeString": "struct TeamManagmentLib.Metadata storage pointer"
+                        }
+                      },
+                      "id": 894,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "allTeamMembers",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 833,
+                      "src": "750:23:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_storage",
+                        "typeString": "string storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 895,
+                      "name": "_allTeamMembers",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 869,
+                      "src": "776:15:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_calldata_ptr",
+                        "typeString": "string calldata"
+                      }
+                    },
+                    "src": "750:41:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage",
+                      "typeString": "string storage ref"
+                    }
+                  },
+                  "id": 897,
+                  "nodeType": "ExpressionStatement",
+                  "src": "750:41:4"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 902,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 898,
+                        "name": "metadata",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 865,
+                        "src": "802:8:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Metadata_$844_storage_ptr",
+                          "typeString": "struct TeamManagmentLib.Metadata storage pointer"
+                        }
+                      },
+                      "id": 900,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "listOfMembersToJoin",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 835,
+                      "src": "802:28:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_storage",
+                        "typeString": "string storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 901,
+                      "name": "_listOfMembersToJoin",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 871,
+                      "src": "833:20:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_calldata_ptr",
+                        "typeString": "string calldata"
+                      }
+                    },
+                    "src": "802:51:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage",
+                      "typeString": "string storage ref"
+                    }
+                  },
+                  "id": 903,
+                  "nodeType": "ExpressionStatement",
+                  "src": "802:51:4"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 905,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "acceptMember",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 872,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 865,
+                  "name": "metadata",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 905,
+                  "src": "501:25:4",
+                  "stateVariable": false,
+                  "storageLocation": "storage",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Metadata_$844_storage_ptr",
+                    "typeString": "struct TeamManagmentLib.Metadata"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 864,
+                    "name": "Metadata",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 844,
+                    "src": "501:8:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Metadata_$844_storage_ptr",
+                      "typeString": "struct TeamManagmentLib.Metadata"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 867,
+                  "name": "_member",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 905,
+                  "src": "528:15:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 866,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "528:7:4",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 869,
+                  "name": "_allTeamMembers",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 905,
+                  "src": "545:31:4",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_calldata_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 868,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "545:6:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 871,
+                  "name": "_listOfMembersToJoin",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 905,
+                  "src": "578:36:4",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_calldata_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 870,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "578:6:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "500:115:4"
+            },
+            "returnParameters": {
+              "id": 873,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "625:0:4"
+            },
+            "scope": 906,
+            "src": "479:382:4",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 907,
+        "src": "26:838:4"
+      }
+    ],
+    "src": "0:864:4"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/Users/earth/Desktop/Project/DAPP/contracts/TeamManagmentLib.sol",
+    "exportedSymbols": {
+      "TeamManagmentLib": [
+        906
+      ]
+    },
+    "id": 907,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 831,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".6"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:4"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "library",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 906,
+        "linearizedBaseContracts": [
+          906
+        ],
+        "name": "TeamManagmentLib",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "TeamManagmentLib.Metadata",
+            "id": 844,
+            "members": [
+              {
+                "constant": false,
+                "id": 833,
+                "name": "allTeamMembers",
+                "nodeType": "VariableDeclaration",
+                "scope": 844,
+                "src": "86:21:4",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 832,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "86:6:4",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 835,
+                "name": "listOfMembersToJoin",
+                "nodeType": "VariableDeclaration",
+                "scope": 844,
+                "src": "118:26:4",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 834,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "118:6:4",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 837,
+                "name": "pendingToJoin",
+                "nodeType": "VariableDeclaration",
+                "scope": 844,
+                "src": "155:18:4",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 836,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "155:4:4",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 839,
+                "name": "teamMembers",
+                "nodeType": "VariableDeclaration",
+                "scope": 844,
+                "src": "184:16:4",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 838,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "184:4:4",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 843,
+                "name": "isMemberOf",
+                "nodeType": "VariableDeclaration",
+                "scope": 844,
+                "src": "211:35:4",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+                  "typeString": "mapping(address => bool)"
+                },
+                "typeName": {
+                  "id": 842,
+                  "keyType": {
+                    "id": 840,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "219:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "nodeType": "Mapping",
+                  "src": "211:24:4",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+                    "typeString": "mapping(address => bool)"
+                  },
+                  "valueType": {
+                    "id": 841,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "230:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Metadata",
+            "nodeType": "StructDefinition",
+            "scope": 906,
+            "src": "59:195:4",
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 862,
+              "nodeType": "Block",
+              "src": "362:105:4",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 854,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "UnaryOperation",
+                    "operator": "++",
+                    "prefix": false,
+                    "src": "373:24:4",
+                    "subExpression": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 851,
+                        "name": "metadata",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 846,
+                        "src": "373:8:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Metadata_$844_storage_ptr",
+                          "typeString": "struct TeamManagmentLib.Metadata storage pointer"
+                        }
+                      },
+                      "id": 853,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "pendingToJoin",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 837,
+                      "src": "373:22:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 855,
+                  "nodeType": "ExpressionStatement",
+                  "src": "373:24:4"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 860,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 856,
+                        "name": "metadata",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 846,
+                        "src": "408:8:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Metadata_$844_storage_ptr",
+                          "typeString": "struct TeamManagmentLib.Metadata storage pointer"
+                        }
+                      },
+                      "id": 858,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "listOfMembersToJoin",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 835,
+                      "src": "408:28:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_storage",
+                        "typeString": "string storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 859,
+                      "name": "_listOfMembersToJoin",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 848,
+                      "src": "439:20:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_calldata_ptr",
+                        "typeString": "string calldata"
+                      }
+                    },
+                    "src": "408:51:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage",
+                      "typeString": "string storage ref"
+                    }
+                  },
+                  "id": 861,
+                  "nodeType": "ExpressionStatement",
+                  "src": "408:51:4"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 863,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "applyForTeam",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 849,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 846,
+                  "name": "metadata",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 863,
+                  "src": "288:25:4",
+                  "stateVariable": false,
+                  "storageLocation": "storage",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Metadata_$844_storage_ptr",
+                    "typeString": "struct TeamManagmentLib.Metadata"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 845,
+                    "name": "Metadata",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 844,
+                    "src": "288:8:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Metadata_$844_storage_ptr",
+                      "typeString": "struct TeamManagmentLib.Metadata"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 848,
+                  "name": "_listOfMembersToJoin",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 863,
+                  "src": "315:36:4",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_calldata_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 847,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "315:6:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "287:65:4"
+            },
+            "returnParameters": {
+              "id": 850,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "362:0:4"
+            },
+            "scope": 906,
+            "src": "266:201:4",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 904,
+              "nodeType": "Block",
+              "src": "625:236:4",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 880,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 874,
+                          "name": "metadata",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 865,
+                          "src": "636:8:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Metadata_$844_storage_ptr",
+                            "typeString": "struct TeamManagmentLib.Metadata storage pointer"
+                          }
+                        },
+                        "id": 877,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "isMemberOf",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 843,
+                        "src": "636:19:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+                          "typeString": "mapping(address => bool)"
+                        }
+                      },
+                      "id": 878,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 876,
+                        "name": "_member",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 867,
+                        "src": "656:7:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "636:28:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "74727565",
+                      "id": 879,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "bool",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "667:4:4",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "value": "true"
+                    },
+                    "src": "636:35:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 881,
+                  "nodeType": "ExpressionStatement",
+                  "src": "636:35:4"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 885,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "UnaryOperation",
+                    "operator": "--",
+                    "prefix": false,
+                    "src": "682:24:4",
+                    "subExpression": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 882,
+                        "name": "metadata",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 865,
+                        "src": "682:8:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Metadata_$844_storage_ptr",
+                          "typeString": "struct TeamManagmentLib.Metadata storage pointer"
+                        }
+                      },
+                      "id": 884,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "pendingToJoin",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 837,
+                      "src": "682:22:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 886,
+                  "nodeType": "ExpressionStatement",
+                  "src": "682:24:4"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 890,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "UnaryOperation",
+                    "operator": "++",
+                    "prefix": false,
+                    "src": "717:22:4",
+                    "subExpression": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 887,
+                        "name": "metadata",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 865,
+                        "src": "717:8:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Metadata_$844_storage_ptr",
+                          "typeString": "struct TeamManagmentLib.Metadata storage pointer"
+                        }
+                      },
+                      "id": 889,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "teamMembers",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 839,
+                      "src": "717:20:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 891,
+                  "nodeType": "ExpressionStatement",
+                  "src": "717:22:4"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 896,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 892,
+                        "name": "metadata",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 865,
+                        "src": "750:8:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Metadata_$844_storage_ptr",
+                          "typeString": "struct TeamManagmentLib.Metadata storage pointer"
+                        }
+                      },
+                      "id": 894,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "allTeamMembers",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 833,
+                      "src": "750:23:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_storage",
+                        "typeString": "string storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 895,
+                      "name": "_allTeamMembers",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 869,
+                      "src": "776:15:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_calldata_ptr",
+                        "typeString": "string calldata"
+                      }
+                    },
+                    "src": "750:41:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage",
+                      "typeString": "string storage ref"
+                    }
+                  },
+                  "id": 897,
+                  "nodeType": "ExpressionStatement",
+                  "src": "750:41:4"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 902,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 898,
+                        "name": "metadata",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 865,
+                        "src": "802:8:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Metadata_$844_storage_ptr",
+                          "typeString": "struct TeamManagmentLib.Metadata storage pointer"
+                        }
+                      },
+                      "id": 900,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "listOfMembersToJoin",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 835,
+                      "src": "802:28:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_storage",
+                        "typeString": "string storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 901,
+                      "name": "_listOfMembersToJoin",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 871,
+                      "src": "833:20:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_calldata_ptr",
+                        "typeString": "string calldata"
+                      }
+                    },
+                    "src": "802:51:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage",
+                      "typeString": "string storage ref"
+                    }
+                  },
+                  "id": 903,
+                  "nodeType": "ExpressionStatement",
+                  "src": "802:51:4"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 905,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "acceptMember",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 872,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 865,
+                  "name": "metadata",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 905,
+                  "src": "501:25:4",
+                  "stateVariable": false,
+                  "storageLocation": "storage",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Metadata_$844_storage_ptr",
+                    "typeString": "struct TeamManagmentLib.Metadata"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 864,
+                    "name": "Metadata",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 844,
+                    "src": "501:8:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Metadata_$844_storage_ptr",
+                      "typeString": "struct TeamManagmentLib.Metadata"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 867,
+                  "name": "_member",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 905,
+                  "src": "528:15:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 866,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "528:7:4",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 869,
+                  "name": "_allTeamMembers",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 905,
+                  "src": "545:31:4",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_calldata_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 868,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "545:6:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 871,
+                  "name": "_listOfMembersToJoin",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 905,
+                  "src": "578:36:4",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_calldata_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 870,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "578:6:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "500:115:4"
+            },
+            "returnParameters": {
+              "id": 873,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "625:0:4"
+            },
+            "scope": 906,
+            "src": "479:382:4",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 907,
+        "src": "26:838:4"
+      }
+    ],
+    "src": "0:864:4"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.6+commit.b259423e.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.3",
+  "updatedAt": "2019-04-13T15:21:10.470Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

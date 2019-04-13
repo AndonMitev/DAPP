@@ -1,6 +1,6 @@
 pragma solidity 0.5.6;
 
-library TeamManagment { 
+library TeamManagmentLib { 
     struct Metadata {
         string allTeamMembers;
         string listOfMembersToJoin;

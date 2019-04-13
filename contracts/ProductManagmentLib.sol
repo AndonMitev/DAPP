@@ -1,6 +1,6 @@
 pragma solidity 0.5.6;
 
-library ProductManagment {
+library ProductManagmentLib {
     struct Product {
         string productHash;
         uint price;
