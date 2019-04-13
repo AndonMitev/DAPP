@@ -74,7 +74,7 @@ export default class MyOffersComponent extends Component {
       });
       this.setState({ showModal: true, txHash: tx.hash });
     } catch (error) {
-      toast.error(error.message, {
+      toast.error('Invalid amount', {
         position: toast.POSITION.TOP_RIGHT
       });
     }

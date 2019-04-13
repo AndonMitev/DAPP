@@ -152,11 +152,6 @@
 		"type": "function"
 	},
 	{
-		"payable": true,
-		"stateMutability": "payable",
-		"type": "fallback"
-	},
-	{
 		"anonymous": false,
 		"inputs": [
 			{

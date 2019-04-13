@@ -4,6 +4,7 @@ import "./ProductManagmentLib.sol";
 import "./SafeMathLib.sol";
 import "./Ownable.sol";
 
+
 contract Store is Ownable {
     
     // Libraries
@@ -25,28 +26,19 @@ contract Store is Ownable {
     event Withdrawed(address withdrawer, uint amount, uint time);
     
     // Modifiers
-    modifier onlyIfValidProductOwner(address _productOwner) {
-        require(_onlyIfValidAddress(_productOwner), 'Invalid address');
-        _;
-    }
-    
+
     modifier onlyIfIsPartOfTheTeam() {
         require(_onlyIfIsPartOfTheTeam(), 'You must be part of the team to post new product');
         _;
     }
-    
-    modifier onlyIfValidProduct(uint _id, uint _price) {
-        require(_onlyIfValidData(_id, _price), 'Price should be 1 ether at least');
-        _;
-    }
-    
+
     modifier onlyIfHasEnough(uint amount) {
         require(_validateWithdraw(amount), 'Not enough funds');
         _;
     }
 
     // Logic
-    function addProduct(address _productOwner, string calldata _allProducts, uint _price, uint _quantity, string calldata _singleProduct, string calldata _userProducts) external {
+    function addProduct(address _productOwner, string calldata _allProducts, uint _price, uint _quantity, string calldata _singleProduct, string calldata _userProducts) external onlyIfIsPartOfTheTeam {
         productMetadata.addProduct(_productOwner, _allProducts, _price, _quantity, _singleProduct, _userProducts);
         emit NewProductAdded(_productOwner, productMetadata.totalSells);
     }
@@ -89,11 +81,11 @@ contract Store is Ownable {
         return teamMetadata.allTeamMembers;
     }
     
-    function listOfMembersToJoin() external view returns(string memory)  {
+    function listOfMembersToJoin() external  view returns(string memory)  {
         return teamMetadata.listOfMembersToJoin;
     }
     
-    function memberData() external view  returns(uint, uint) {
+    function memberData() external view returns(uint, uint) {
         return(teamMetadata.pendingToJoin, teamMetadata.teamMembers);
     }
 
@@ -101,40 +93,23 @@ contract Store is Ownable {
         return balanceOf[msg.sender];
     }
     
-    function checkSellsOfContract() public view  returns(uint, uint, uint) {
+    function checkSellsOfContract() public view onlyIfOwner returns(uint, uint, uint)  {
         return (address(this).balance, productMetadata.totalSells, productMetadata.totalProducts);
     }
 
-    function withdraw(uint amount) external payable {
+    function withdraw(uint amount) external payable onlyIfHasEnough(amount) {
         address payable sender = msg.sender;
         balanceOf[sender].sub(amount);
         sender.transfer(amount);
         emit Withdrawed(sender, amount, now);
     }
-    
-    function() external payable {
-        require(msg.data.length == 0);
-    }
-    
+
     // Modifier helpers
-    function _onlyIfValidAddress(address _productOwner) private pure returns(bool) {
-         return _productOwner != address(0);
-    }
-    
-    function _onlyIfValidData(uint _id, uint _price) private pure returns(bool) {
-        return _id > 0 && _price > 0;
-    }
-    
-        
-    function _validateEther (uint _price, uint _quantity) private view returns(bool) {
-       return _price.add(_quantity) == msg.value;
-    }
-    
     function _validateWithdraw(uint amount) private view returns(bool) {
         return amount <= balanceOf[msg.sender];
     }
     
     function _onlyIfIsPartOfTheTeam() private view returns(bool) {
-        return teamMetadata.isMemberOf[msg.sender];
+        return teamMetadata.isMemberOf[msg.sender] == true || msg.sender == owner;
     }
 }

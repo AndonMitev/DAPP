@@ -72,7 +72,7 @@ export default class Navbar extends Component {
                         {this.state.owner.isOwner ? <NavLink className="nav-link  text-white mr-3" to="/candidates">View candidates</NavLink> : null}
                     </li>
                     <li className="nav-item">
-                        <NavLink className="nav-link  text-white mr-3" to="/team">Team members</NavLink>
+                        {this.state.owner.isOwner ?  <NavLink className="nav-link  text-white mr-3" to="/team">Team members</NavLink> : null}
                     </li>
                     <li className="nav-item">
                         {this.state.owner.isOwner ? <NavLink className="nav-link  text-white mr-3" to="/contract">Contract State</NavLink> : null}
